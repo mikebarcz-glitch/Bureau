@@ -79,9 +79,10 @@ const standards = [
 export default function ProcessPage() {
   return (
     <>
-      <section className="border-b border-stone/70 bg-linen py-20 md:py-28">
+      <section className="border-b border-stone/70 bg-linen py-20 md:py-24">
         <Container>
           <SectionHeading
+            level="h1"
             kicker="How We Work"
             title="A Defined Process, Built to Protect Quality and Manage Expectations"
             subtitle="From first inquiry to final debrief, every engagement moves through the same eight-stage process — structured, transparent, and designed so you always know exactly where things stand."
@@ -89,7 +90,7 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <ol className="mx-auto flex max-w-3xl flex-col">
             {steps.map((s, i) => (

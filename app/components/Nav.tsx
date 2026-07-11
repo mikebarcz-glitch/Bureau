@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks, site } from "@/lib/site";
 import { Logo } from "@/app/components/Logo";
+import { Button } from "@/app/components/Button";
 
 export function Nav() {
   const pathname = usePathname();
@@ -38,18 +39,17 @@ export function Nav() {
               </Link>
             );
           })}
-          <Link
-            href="/contact"
-            className="rounded-sm border border-forest bg-forest px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] text-cream uppercase transition-colors hover:bg-forest-dark hover:border-forest-dark"
-          >
-            Design Your Retreat
-          </Link>
+          <Button href="/contact" size="sm">
+            Start a Retreat
+          </Button>
         </nav>
 
         <button
           type="button"
           aria-label="Toggle menu"
-          className="flex flex-col gap-1.5 md:hidden"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          className="-mr-3.5 flex flex-col gap-1.5 p-3.5 md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           <span
@@ -65,7 +65,10 @@ export function Nav() {
       </div>
 
       {open ? (
-        <nav className="flex flex-col gap-1 border-t border-stone/70 bg-cream px-6 py-4 md:hidden">
+        <nav
+          id="mobile-nav"
+          className="flex max-h-[calc(100vh-4rem)] flex-col gap-1 overflow-y-auto border-t border-stone/70 bg-cream px-6 py-4 md:hidden"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -76,13 +79,14 @@ export function Nav() {
               {link.label}
             </Link>
           ))}
-          <Link
+          <Button
             href="/contact"
+            size="sm"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex w-fit rounded-sm border border-forest bg-forest px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] text-cream uppercase"
+            className="mt-2 w-fit"
           >
-            Design Your Retreat
-          </Link>
+            Start a Retreat
+          </Button>
           <span className="mt-4 text-xs text-ink-muted">{site.region}</span>
         </nav>
       ) : null}

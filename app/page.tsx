@@ -114,7 +114,7 @@ export default function Home() {
               you can be fully present.
             </p>
             <div className="mt-2 flex flex-wrap gap-4">
-              <Button href="/contact" variant="primary" className="!bg-brass !border-brass hover:!bg-brass-light hover:!border-brass-light !text-forest-dark">
+              <Button href="/contact" variant="accent">
                 Start a Retreat
               </Button>
               <Button href="/services" variant="ghost">
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* The gap */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
             <div className="flex flex-col gap-6">
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <SectionHeading
             kicker="What We Do"
@@ -240,7 +240,7 @@ export default function Home() {
                 Review full pricing ranges and inclusions for every service
                 line.
               </p>
-              <Button href="/services" variant="secondary" className="w-fit">
+              <Button href="/services#pricing" variant="secondary" className="w-fit">
                 View Services
               </Button>
             </div>
@@ -249,7 +249,7 @@ export default function Home() {
       </section>
 
       {/* Off-site teaser */}
-      <section className="bg-linen py-20 md:py-28">
+      <section className="bg-linen py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
             <PlaceholderImage
@@ -294,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* Psychology */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <SectionHeading
             kicker="Why It Matters"
@@ -324,7 +324,7 @@ export default function Home() {
       </section>
 
       {/* Process teaser */}
-      <section className="border-y border-stone/70 bg-linen py-20 md:py-28">
+      <section className="border-y border-stone/70 bg-linen py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-[1fr_1.2fr] md:items-center">
             <div className="flex flex-col gap-6">
@@ -388,11 +388,7 @@ export default function Home() {
             Tell us about your group, your goals, and your dates —
             you&rsquo;ll have a custom proposal within 48 hours.
           </p>
-          <Button
-            href="/contact"
-            variant="primary"
-            className="!bg-brass !border-brass hover:!bg-brass-light hover:!border-brass-light !text-forest-dark mt-2"
-          >
+          <Button href="/contact" variant="accent" className="mt-2">
             Start a Retreat
           </Button>
         </Container>

@@ -12,6 +12,10 @@
   --color-forest-dark: #2c3524;
   --color-brass: #a9895c;
   --color-brass-light: #c7a978;
+  --color-brass-ink: #8a6a42;
+  --color-sage-light: #d7dcc7;
+  --color-sage: #b3bd97;
+  --color-sage-dark: #7d8863;
 }
 
 @theme inline {
@@ -26,49 +30,57 @@
   --color-forest-dark: var(--color-forest-dark);
   --color-brass: var(--color-brass);
   --color-brass-light: var(--color-brass-light);
+  --color-brass-ink: var(--color-brass-ink);
+  --color-sage-light: var(--color-sage-light);
+  --color-sage: var(--color-sage);
+  --color-sage-dark: var(--color-sage-dark);
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);
 }
 
-* {
-  border-color: var(--color-stone);
+@layer base {
+  * {
+    border-color: var(--color-stone);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: var(--color-forest);
+    color: var(--color-cream);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer components {
+  .font-serif {
+    font-family: var(--font-serif), ui-serif, Georgia, serif;
+  }
 
-body {
-  background: var(--color-cream);
-  color: var(--color-ink);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-}
+  .kicker {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-brass-ink);
+  }
 
-.font-serif {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-}
+  .hairline {
+    height: 1px;
+    background: var(--color-stone);
+  }
 
-::selection {
-  background: var(--color-forest);
-  color: var(--color-cream);
-}
-
-.kicker {
-  font-family: var(--font-sans), sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--color-brass);
-}
-
-.hairline {
-  height: 1px;
-  background: var(--color-stone);
-}
-
-.text-balance {
-  text-wrap: balance;
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 @keyframes fade-up {
@@ -84,4 +96,14 @@ body {
 
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up {
+    animation: none;
+  }
 }

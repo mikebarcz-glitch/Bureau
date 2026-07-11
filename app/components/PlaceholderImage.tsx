@@ -7,10 +7,10 @@ type PlaceholderImageProps = {
 };
 
 const variants: Record<string, string> = {
-  linen: "from-[#efe4c9] via-[#e2d3ac] to-[#c7ac7c]",
-  sage: "from-[#d7dcc7] via-[#b3bd97] to-[#7d8863]",
-  stone: "from-[#ece4d3] via-[#cabfa6] to-[#a89876]",
-  brass: "from-[#e3d2ac] via-[#c7a978] to-[#a9895c]",
+  linen: "from-linen via-linen-dark to-stone-dark",
+  sage: "from-sage-light via-sage to-sage-dark",
+  stone: "from-linen via-stone to-stone-dark",
+  brass: "from-linen-dark via-brass-light to-brass",
 };
 
 export function PlaceholderImage({
@@ -18,7 +18,7 @@ export function PlaceholderImage({
   aspect = "aspect-[4/5]",
   variant = "linen",
   className = "",
-  showCaption = true,
+  showCaption = false,
 }: PlaceholderImageProps) {
   return (
     <figure className={className}>
@@ -32,7 +32,10 @@ export function PlaceholderImage({
               "radial-gradient(circle at 22% 20%, rgba(255,255,255,0.55), transparent 45%), radial-gradient(circle at 82% 78%, rgba(0,0,0,0.14), transparent 55%)",
           }}
         />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div
+          className="absolute inset-0 flex items-center justify-center"
+          aria-hidden="true"
+        >
           <span className="font-serif text-3xl tracking-[0.15em] text-cream/50 select-none md:text-4xl">
             HB
           </span>
@@ -43,7 +46,9 @@ export function PlaceholderImage({
         <figcaption className="mt-2 text-xs leading-snug text-ink-muted italic">
           {caption}
         </figcaption>
-      ) : null}
+      ) : (
+        <span className="sr-only">{caption}</span>
+      )}
     </figure>
   );
 }

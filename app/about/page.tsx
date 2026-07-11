@@ -46,9 +46,10 @@ const walkAway = [
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-stone/70 bg-linen py-20 md:py-28">
+      <section className="border-b border-stone/70 bg-linen py-20 md:py-24">
         <Container>
           <SectionHeading
+            level="h1"
             kicker="About The Hospitality Bureau"
             title="Ontario's only boutique hospitality firm specialising in end-to-end corporate retreat experiences."
             subtitle="Combining elevated dining, curated off-site programming, and flawless operational execution under one trusted partnership."
@@ -56,15 +57,14 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
             <div className="flex flex-col gap-6">
-              <span className="kicker">Our Philosophy</span>
-              <h2 className="font-serif text-balance text-3xl leading-tight text-ink md:text-4xl">
-                We don&rsquo;t just service the retreat — we design the
-                experience around it.
-              </h2>
+              <SectionHeading
+                kicker="Our Philosophy"
+                title="We don’t just service the retreat — we design the experience around it."
+              />
               <p className="leading-relaxed text-ink-muted">
                 Every moment is intentional. Every detail is managed. Every
                 touchpoint reflects the client&rsquo;s standard. Corporate
@@ -102,7 +102,7 @@ export default function AboutPage() {
               <span className="px-6 py-3 text-xs font-medium tracking-[0.14em] text-brass-light uppercase">
                 We Are
               </span>
-              <span className="border-l border-cream/15 px-6 py-3 text-xs font-medium tracking-[0.14em] text-cream/50 uppercase">
+              <span className="border-l border-cream/15 px-6 py-3 text-xs font-medium tracking-[0.14em] text-cream/70 uppercase">
                 We Are Not
               </span>
             </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 <span className="px-6 py-3.5 text-sm text-cream">
                   {row.are}
                 </span>
-                <span className="border-l border-cream/15 px-6 py-3.5 text-sm text-cream/50">
+                <span className="border-l border-cream/15 px-6 py-3.5 text-sm text-cream/70">
                   {row.not}
                 </span>
               </div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust signals */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-24">
         <Container>
           <SectionHeading
             kicker="How We Operate"

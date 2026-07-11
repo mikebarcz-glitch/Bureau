@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 const categories = [
   {
     icon: Compass,
+    kicker: "Experience Category 01 / 05",
     title: "Adventure & Active",
     items: [
       "Private guided hiking and trail experiences",
@@ -31,6 +32,7 @@ const categories = [
   },
   {
     icon: Sparkles,
+    kicker: "Experience Category 02 / 05",
     title: "Wellness & Reset",
     items: [
       "Private yoga and meditation sessions (indoor or outdoor)",
@@ -42,6 +44,7 @@ const categories = [
   },
   {
     icon: Wine,
+    kicker: "Experience Category 03 / 05",
     title: "Culinary & Social",
     items: [
       "Winery, brewery, and distillery tours",
@@ -53,6 +56,7 @@ const categories = [
   },
   {
     icon: UsersRound,
+    kicker: "Experience Category 04 / 05",
     title: "Team Building & Leadership Development",
     items: [
       "Facilitated workshops and leadership sessions",
@@ -64,6 +68,7 @@ const categories = [
   },
   {
     icon: Gem,
+    kicker: "Experience Category 05 / 05",
     title: "Luxury & Lifestyle",
     items: [
       "Private shopping or personal styling experiences",
@@ -80,14 +85,14 @@ export default function ExperiencesPage() {
     <>
       <section className="relative overflow-hidden border-b border-stone/70">
         <div className="absolute inset-0">
-          <div className="h-full w-full bg-gradient-to-br from-[#d7dcc7] via-[#b3bd97] to-[#7d8863]" />
+          <div className="h-full w-full bg-gradient-to-br from-sage-light via-sage to-sage-dark" />
           <div className="absolute inset-0 bg-forest-dark/50" />
         </div>
         <Container className="relative flex min-h-[46vh] flex-col justify-end gap-6 py-20 md:py-24">
           <span className="kicker text-brass-light">
             Signature Differentiator
           </span>
-          <h1 className="font-serif text-balance max-w-3xl text-4xl leading-[1.1] text-cream md:text-5xl">
+          <h1 className="font-serif text-balance max-w-3xl text-4xl leading-[1.1] text-cream sm:text-5xl md:text-6xl lg:text-[4rem]">
             Off-Site Experiences
           </h1>
           <p className="max-w-xl text-balance leading-relaxed text-cream/85">
@@ -118,9 +123,7 @@ export default function ExperiencesPage() {
                     size={28}
                     strokeWidth={1.5}
                   />
-                  <h2 className="font-serif text-2xl text-ink md:text-3xl">
-                    {c.title}
-                  </h2>
+                  <SectionHeading kicker={c.kicker} title={c.title} />
                   <ul className="flex flex-col gap-2.5">
                     {c.items.map((item) => (
                       <li

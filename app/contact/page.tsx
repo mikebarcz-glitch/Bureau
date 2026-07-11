@@ -17,6 +17,7 @@ export default function ContactPage() {
       <section className="border-b border-stone/70 bg-linen py-20 md:py-24">
         <Container>
           <SectionHeading
+            level="h1"
             kicker="Start a Retreat"
             title="Tell us about your group, your goals, and your dates — that's where we begin."
             subtitle="Within 48 hours, you'll have a custom proposal in hand — itinerary overview, menu direction, experience options, and investment, built specifically around your group."
@@ -34,22 +35,22 @@ export default function ContactPage() {
                 <h3 className="font-serif text-lg text-ink">
                   Direct Contact
                 </h3>
-                <div className="flex flex-col gap-4 text-sm text-ink-muted">
+                <div className="flex flex-col gap-1 text-sm text-ink-muted">
                   <a
                     href={`mailto:${site.email}`}
-                    className="flex items-center gap-3 hover:text-ink"
+                    className="flex items-center gap-3 py-2 hover:text-ink"
                   >
                     <Mail className="text-forest" size={17} strokeWidth={1.5} />
                     {site.email}
                   </a>
                   <a
                     href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
-                    className="flex items-center gap-3 hover:text-ink"
+                    className="flex items-center gap-3 py-2 hover:text-ink"
                   >
                     <Phone className="text-forest" size={17} strokeWidth={1.5} />
                     {site.phone}
                   </a>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 py-2">
                     <MapPin className="text-forest" size={17} strokeWidth={1.5} />
                     {site.region}
                   </div>
@@ -86,6 +87,10 @@ export default function ContactPage() {
                 50% deposit required to secure any booking. Final payment
                 due 14 days prior to the event. All pricing in CAD; HST
                 applied to all invoices.
+              </p>
+              <p className="text-xs leading-relaxed text-ink-muted">
+                Every vendor in our network is pre-vetted for quality,
+                reliability, and brand fit.
               </p>
             </div>
           </div>

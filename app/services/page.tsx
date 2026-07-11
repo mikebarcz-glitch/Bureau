@@ -124,9 +124,10 @@ const pricing = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="border-b border-stone/70 bg-linen py-20 md:py-28">
+      <section className="border-b border-stone/70 bg-linen py-20 md:py-24">
         <Container>
           <SectionHeading
+            level="h1"
             kicker="Services"
             title="Five interconnected service lines, one standard of execution. Engage a single line, or hand us the entire retreat."
             subtitle="Each service stands on its own. Clients who engage us for full retreat production experience the fullest expression of what we do — a single, cohesive arc from arrival to departure."
@@ -216,18 +217,14 @@ export default function ServicesPage() {
             single retreat arc. This is what sets us apart from every
             other operator in the corridor.
           </p>
-          <Button
-            href="/experiences"
-            variant="primary"
-            className="!bg-brass !border-brass hover:!bg-brass-light hover:!border-brass-light !text-forest-dark"
-          >
+          <Button href="/experiences" variant="accent">
             Explore Off-Site Experiences
           </Button>
         </Container>
       </section>
 
       {/* Pricing */}
-      <section className="py-20 md:py-28">
+      <section id="pricing" className="scroll-mt-24 py-20 md:py-24">
         <Container>
           <SectionHeading
             kicker="Investment"
@@ -272,6 +269,14 @@ export default function ServicesPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs italic text-ink-muted sm:hidden">
+            Scroll to view full pricing
+          </p>
+          <p className="mt-3 text-xs leading-relaxed text-ink-muted">
+            Every vendor in our network is pre-vetted for quality,
+            reliability, and brand fit — we never pass an unvetted vendor
+            to a client.
+          </p>
 
           <div className="mt-16 flex flex-col items-center gap-5 text-center">
             <p className="max-w-lg text-balance text-ink-muted">

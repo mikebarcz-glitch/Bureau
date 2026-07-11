@@ -4,16 +4,16 @@ import { FormEvent, useState } from "react";
 import { site } from "@/lib/site";
 
 const serviceOptions = [
+  "Not sure yet",
   "Chalet Catering",
   "Hosted Dining Experience",
   "Off-Site Experiences",
   "Full Retreat Curation & Planning",
   "Corporate Gifting",
-  "Not sure yet",
 ];
 
 const inputClasses =
-  "w-full rounded-sm border border-stone bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 focus:border-forest focus:outline-none";
+  "w-full rounded-sm border border-stone bg-cream px-4 py-3 text-base text-ink placeholder:text-ink-muted focus:border-forest focus:outline-none invalid:border-stone-dark invalid:focus:border-forest";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -54,6 +54,11 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <p className="text-xs leading-relaxed text-ink-muted">
+        Submitting opens a pre-filled email to {site.email} in your own
+        email client — nothing is sent from this page directly.
+      </p>
+
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="name" className="text-xs font-medium tracking-[0.06em] text-ink uppercase">
@@ -149,11 +154,12 @@ export function ContactForm() {
         Send Inquiry
       </button>
 
-      <p className="text-xs leading-relaxed text-ink-muted">
-        {sent
-          ? "Your email client should now be open with your details pre-filled — send it over and we'll respond within 24 hours."
-          : `This opens your email client, addressed to ${site.email}, with your details pre-filled.`}
-      </p>
+      {sent ? (
+        <p className="text-xs leading-relaxed text-ink-muted">
+          Your email client should now be open with your details pre-filled
+          — send it over and we&rsquo;ll respond within 24 hours.
+        </p>
+      ) : null}
     </form>
   );
 }

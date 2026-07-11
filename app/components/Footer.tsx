@@ -10,7 +10,7 @@ export function Footer() {
           <Logo
             markSize={34}
             wordmarkClassName="text-xl"
-            taglineClassName="text-brass-light/80"
+            taglineClassName="text-brass-light"
             showTagline
             className="text-cream"
           />
@@ -21,7 +21,7 @@ export function Footer() {
             operational execution — under one trusted partnership, across
             the Collingwood–Blue Mountain corridor.
           </p>
-          <p className="mt-6 text-xs tracking-[0.14em] text-cream/50 uppercase">
+          <p className="mt-6 text-xs tracking-[0.14em] text-cream/70 uppercase">
             {site.region}
           </p>
         </div>
@@ -73,7 +73,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-cream/50 md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-cream/70 md:flex-row md:items-center md:justify-between md:px-10">
           <span>
             &copy; {new Date().getFullYear()} The Hospitality Bureau. All
             rights reserved.
