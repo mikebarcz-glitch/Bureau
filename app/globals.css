@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f9f5ec;
+  --color-linen: #f1e8d8;
+  --color-linen-dark: #e6d9bf;
+  --color-stone: #cabfa6;
+  --color-stone-dark: #a89876;
+  --color-ink: #2a2620;
+  --color-ink-muted: #6e6455;
+  --color-forest: #3f4a34;
+  --color-forest-dark: #2c3524;
+  --color-brass: #a9895c;
+  --color-brass-light: #c7a978;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-linen: var(--color-linen);
+  --color-linen-dark: var(--color-linen-dark);
+  --color-stone: var(--color-stone);
+  --color-stone-dark: var(--color-stone-dark);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-forest: var(--color-forest);
+  --color-forest-dark: var(--color-forest-dark);
+  --color-brass: var(--color-brass);
+  --color-brass-light: var(--color-brass-light);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  border-color: var(--color-stone);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.kicker {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-brass);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--color-stone);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
