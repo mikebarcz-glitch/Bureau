@@ -19,7 +19,7 @@ export function Nav() {
           className="text-ink"
           onClick={() => setOpen(false)}
         >
-          <Logo markSize={26} wordmarkClassName="text-[0.95rem]" />
+          <Logo markSize={32} wordmarkClassName="text-[1.15rem]" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
