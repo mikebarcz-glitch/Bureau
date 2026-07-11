@@ -17,20 +17,20 @@ const serviceSections = [
     kicker: "Service Line 01 · Core Revenue Driver",
     title: "Chalet Catering",
     intro:
-      "Refined, intentional dining designed for executive environments. Our highest-volume service and the primary touchpoint through which new clients discover us.",
+      "Refined, intentional dining built for executive environments — our highest-volume service, and the primary touchpoint through which new clients discover the bureau.",
     included: [
-      "Elevated breakfast service (plated or curated station)",
-      "Working lunches (structured grazing, build-your-own, or plated)",
-      "Multi-course plated dinners (3–5 courses with optional wine pairing)",
+      "Elevated breakfast service — plated, or a curated station",
+      "Working lunches: structured grazing, build-your-own, or plated",
+      "Multi-course plated dinners (3–5 courses, with optional wine pairing)",
       "Cocktail receptions and aperitivo service",
       "Refined grazing tables — structured and editorial, never rustic",
-      "Full dietary management: allergies, restrictions, preferences",
+      "Full dietary management: allergies, restrictions, and preferences",
     ],
     differentiators: [
       "Every menu is custom — no templated packages",
-      "Developed collaboratively with client input on tone and occasion",
-      "Includes coordination of all equipment, serviceware, linens, and staffing",
-      "Professional service standard aligned to executive environments",
+      "Developed collaboratively, with client input shaping tone and occasion",
+      "Full coordination of equipment, serviceware, linens, and staffing included",
+      "A professional service standard calibrated to executive environments",
     ],
     variant: "linen" as const,
     reverse: false,
@@ -40,13 +40,13 @@ const serviceSections = [
     kicker: "Service Line 02",
     title: "Hosted Dining Experiences",
     intro:
-      "For clients who want dining as the centrepiece of the retreat, not just a meal. Exceptional food as a vehicle for meaningful conversation, connection, and shared experience.",
+      "For clients who want dining as the centrepiece of the retreat, not simply a meal — exceptional food as the vehicle for meaningful conversation, connection, and shared experience.",
     included: [
-      "3–5 course plated dinners with a full service team",
+      "3–5 course plated dinners, delivered by a full service team",
       "Chef-led private dining with kitchen-forward presentation",
-      "Wine-paired executive evenings with curated selections",
+      "Wine-paired executive evenings built around curated selections",
       "Chef's table experiences — open kitchen, course-by-course narration",
-      "Interactive culinary formats with guest involvement",
+      "Interactive culinary formats designed around guest involvement",
     ],
     differentiators: [],
     variant: "brass" as const,
@@ -57,18 +57,18 @@ const serviceSections = [
     kicker: "Service Line 04 · High-Growth Offering",
     title: "Full Retreat Curation & Planning",
     intro:
-      "Clients hand us the brief — we handle everything from concept to wrap.",
+      "Hand us the brief. We handle everything from concept to wrap.",
     included: [
-      "Discovery session to establish goals, tone, group profile, and outcomes",
-      "Full itinerary design — day-by-day, hour-by-hour arc",
+      "A discovery session to establish goals, tone, group profile, and outcomes",
+      "Full itinerary design — a day-by-day, hour-by-hour arc",
       "Off-site experience curation, vetting, and booking",
       "All vendor sourcing, contracting, and management",
       "Transportation logistics and scheduling",
       "Private chef coordination and menu development",
       "Welcome gifting and branded arrival moments",
       "Chalet styling and light production elements",
-      "On-site management with a dedicated bureau lead",
-      "Run-of-show document and day-of execution",
+      "On-site management led by a dedicated bureau lead",
+      "A run-of-show document and day-of execution",
       "Post-retreat debrief and feedback capture",
     ],
     differentiators: [],
@@ -80,10 +80,10 @@ const serviceSections = [
     kicker: "Service Line 05",
     title: "Corporate Gifting & Experience Design",
     intro:
-      "Touchpoints that extend the experience beyond the retreat itself.",
+      "Touchpoints that carry the experience beyond the retreat itself.",
     included: [
-      "Executive welcome kits (curated, branded, locally sourced)",
-      "Branded in-chalet moments — arrival set-up, room styling, curated details",
+      "Executive welcome kits — curated, branded, and locally sourced",
+      "Branded in-chalet moments: arrival set-up, room styling, curated details",
       "Printed itineraries, name placements, and guest notes",
       "Departure gifting — memorable take-home moments",
     ],
@@ -128,8 +128,8 @@ export default function ServicesPage() {
         <Container>
           <SectionHeading
             kicker="Services"
-            title="Five interconnected service lines. Book one, or hand us the whole retreat."
-            subtitle="Each service can stand alone. Clients who engage us for full retreat production experience the fullest expression of what we do — a single, cohesive arc from arrival to departure."
+            title="Five interconnected service lines, one standard of execution. Engage a single line, or hand us the entire retreat."
+            subtitle="Each service stands on its own. Clients who engage us for full retreat production experience the fullest expression of what we do — a single, cohesive arc from arrival to departure."
           />
         </Container>
       </section>
@@ -208,13 +208,13 @@ export default function ServicesPage() {
             Service Line 03 · Signature Differentiator
           </span>
           <h2 className="font-serif text-balance text-3xl leading-tight md:text-4xl">
-            Off-Site Experiences deserve their own page.
+            Off-Site Experiences warrant a page of their own.
           </h2>
           <p className="max-w-xl text-balance text-cream/75">
             Adventure, wellness, culinary and social, team building, and
             luxury lifestyle programming — fully vetted and woven into a
-            single retreat arc. This is what separates us from every other
-            operator in the corridor.
+            single retreat arc. This is what sets us apart from every
+            other operator in the corridor.
           </p>
           <Button
             href="/experiences"
@@ -275,8 +275,9 @@ export default function ServicesPage() {
 
           <div className="mt-16 flex flex-col items-center gap-5 text-center">
             <p className="max-w-lg text-balance text-ink-muted">
-              Every proposal is custom. Tell us about your group and goals,
-              and we&rsquo;ll return a tailored quote within 48 hours.
+              Every proposal is custom. Tell us about your group and your
+              goals, and we&rsquo;ll return a tailored quote within 48
+              hours.
             </p>
             <Button href="/contact">Request a Proposal</Button>
           </div>

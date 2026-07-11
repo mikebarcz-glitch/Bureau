@@ -15,7 +15,10 @@ export function Footer() {
             className="text-cream"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream/70">
-            {site.tagline} A boutique retreat design firm operating across
+            {site.tagline} Ontario&rsquo;s only boutique hospitality firm
+            specialising in end-to-end corporate retreat experiences —
+            elevated dining, curated off-site programming, and flawless
+            operational execution — under one trusted partnership, across
             the Collingwood–Blue Mountain corridor.
           </p>
           <p className="mt-6 text-xs tracking-[0.14em] text-cream/50 uppercase">
@@ -75,7 +78,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} The Hospitality Bureau. All
             rights reserved.
           </span>
-          <span>Designed for leadership teams who expect more.</span>
+          <span>
+            For leadership teams who expect precision execution,
+            delivered seamlessly, every time.
+          </span>
         </div>
       </div>
     </footer>

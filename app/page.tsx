@@ -18,39 +18,39 @@ const pillars = [
   {
     icon: NotebookPen,
     title: "Retreat Design",
-    body: "Every itinerary built hour-by-hour around your team's goals, not a template.",
+    body: "Every itinerary architected hour-by-hour around your team's goals — never a template, never generic.",
   },
   {
     icon: UtensilsCrossed,
     title: "Elevated Dining",
-    body: "Chef-led menus, executive service standards, dietary needs handled without a second thought.",
+    body: "Chef-led menus, executive-grade service standards, and dietary needs handled without a second thought.",
   },
   {
     icon: Compass,
     title: "Curated Experiences",
-    body: "Adventure, wellness, and culinary programming woven into one cohesive arc.",
+    body: "Adventure, wellness, and culinary programming woven into a single, cohesive arc.",
   },
   {
     icon: Check,
     title: "Flawless Execution",
-    body: "One accountable partner on-site — not six vendors you have to manage yourself.",
+    body: "One accountable partner on-site — not six vendors left for you to manage.",
   },
 ];
 
 const services = [
   {
     title: "Chalet Catering",
-    body: "Breakfast, working lunches, plated dinners, and receptions — fully custom, never templated.",
+    body: "Breakfast, working lunches, plated dinners, and receptions — every menu custom, never templated.",
     href: "/services#catering",
   },
   {
     title: "Hosted Dining Experiences",
-    body: "Chef's table narration, wine-paired evenings, and interactive culinary formats.",
+    body: "Chef's table narration, wine-paired evenings, and interactive culinary formats built for connection.",
     href: "/services#hosted-dining",
   },
   {
     title: "Off-Site Experiences",
-    body: "Adventure, wellness, culinary, and team-building programming — vetted and fully coordinated.",
+    body: "Adventure, wellness, culinary, and team-building programming — fully vetted, fully coordinated.",
     href: "/experiences",
   },
   {
@@ -60,25 +60,25 @@ const services = [
   },
   {
     title: "Corporate Gifting",
-    body: "Branded welcome kits, chalet styling, and departure moments guests remember.",
+    body: "Branded welcome kits, chalet styling, and departure moments your guests remember.",
     href: "/services#gifting",
   },
 ];
 
 const wants = [
-  "Flawless execution with no surprises",
-  "Clear, proactive communication",
+  "Flawless execution — no surprises",
+  "Clear, proactive communication at every step",
   "Elevated, brand-aligned experiences",
   "Expert handling of every dietary need",
-  "One trusted partner, not six vendors",
-  "Discretion and professionalism throughout",
+  "One trusted partner, not six vendors to manage",
+  "Discretion and professionalism, start to finish",
 ];
 
 const stats = [
-  { value: "10–25", label: "Guests per retreat — our core operating range" },
-  { value: "5", label: "Integrated service lines under one partnership" },
+  { value: "10–25", label: "Guests per retreat — our defined operating range" },
+  { value: "5", label: "Interconnected service lines under one partnership" },
   { value: "90–120", label: "Minutes from Toronto to the corridor" },
-  { value: "48hrs", label: "From discovery call to full proposal" },
+  { value: "48hrs", label: "From discovery call to custom proposal" },
 ];
 
 export default function Home() {
@@ -104,12 +104,14 @@ export default function Home() {
               Collingwood · Blue Mountain · Thornbury · Meaford
             </span>
             <h1 className="font-serif text-balance text-4xl leading-[1.1] text-cream sm:text-5xl md:text-6xl lg:text-[4rem]">
-              Luxury hospitality. Corporate precision. End-to-end execution.
+              Every retreat, designed. Every detail, executed. Nothing
+              improvised.
             </h1>
             <p className="max-w-xl text-balance text-base leading-relaxed text-cream/85 md:text-lg">
-              We design and execute premium corporate retreat experiences —
-              dining, activities, logistics, and on-site management — under
-              a single, trusted partnership.
+              We design and execute premium corporate retreat experiences
+              for Toronto-based companies — dining, activities, logistics,
+              and on-site management — under one trusted partnership, so
+              you can be fully present.
             </p>
             <div className="mt-2 flex flex-wrap gap-4">
               <Button href="/contact" variant="primary" className="!bg-brass !border-brass hover:!bg-brass-light hover:!border-brass-light !text-forest-dark">
@@ -141,21 +143,23 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SectionHeading
                 kicker="The Market Gap"
-                title="No one else delivers the full retreat — so clients end up managing it themselves."
+                title="Everyone else hands you a piece. You're left assembling the whole."
               />
               <p className="text-balance leading-relaxed text-ink-muted">
-                Restaurants offer good food but no privacy or flexibility.
-                Caterers deliver meals, not experience. Activity providers
-                run in isolation. Event planners coordinate logistics but
-                lack hospitality expertise. Corporate planners are left
-                juggling multiple vendors — introducing risk,
-                inconsistency, and friction into something that&rsquo;s
-                supposed to feel effortless.
+                Restaurants deliver good food, but no privacy or
+                flexibility. Caterers deliver meals, not experience.
+                Activity providers operate in isolation. Event planners
+                coordinate logistics without hospitality expertise. The
+                result: corporate planners left juggling multiple vendors —
+                absorbing risk, inconsistency, and friction into something
+                that should feel effortless.
               </p>
               <p className="leading-relaxed text-ink-muted">
                 The Hospitality Bureau is the only operator in the
                 Collingwood–Blue Mountain corridor delivering all five
-                pillars simultaneously.
+                pillars — retreat design, elevated dining, curated
+                off-site experiences, full vendor coordination, and
+                on-site execution — simultaneously, under one partnership.
               </p>
               <Link
                 href="/about"
@@ -208,8 +212,8 @@ export default function Home() {
         <Container>
           <SectionHeading
             kicker="What We Do"
-            title="Five interconnected service lines. One accountable partner."
-            subtitle="Each can be booked independently — though clients who engage us for full retreat production experience the fullest expression of what we do."
+            title="Five interconnected service lines. A single accountable partner."
+            subtitle="Each service line stands on its own — though clients who commission full retreat production experience the fullest expression of what we do."
             align="center"
             className="mx-auto"
           />
@@ -233,7 +237,7 @@ export default function Home() {
             <div className="flex flex-col justify-center gap-4 rounded-sm border border-dashed border-stone-dark p-7">
               <ChefHat className="text-brass" size={26} strokeWidth={1.5} />
               <p className="text-sm leading-relaxed text-ink-muted">
-                See full pricing ranges and inclusions for every service
+                Review full pricing ranges and inclusions for every service
                 line.
               </p>
               <Button href="/services" variant="secondary" className="w-fit">
@@ -257,12 +261,12 @@ export default function Home() {
             <div className="order-1 flex flex-col gap-6 md:order-2">
               <SectionHeading
                 kicker="Our Signature Differentiator"
-                title="Off-site experiences designed as one cohesive arc — not a list of activities."
+                title="Off-site experiences built as one continuous arc — never a checklist of activities."
               />
               <p className="leading-relaxed text-ink-muted">
                 Adventure and active pursuits, wellness and reset, culinary
                 and social programming, team building, and elevated
-                lifestyle moments — all vetted, brand-aligned, and fully
+                lifestyle moments — vetted, brand-aligned, and fully
                 coordinated from arrival to departure.
               </p>
               <div className="flex flex-wrap gap-2.5">
@@ -294,7 +298,7 @@ export default function Home() {
         <Container>
           <SectionHeading
             kicker="Why It Matters"
-            title="Understanding what you fear is as important as understanding what you want."
+            title="Understanding what you fear matters as much as understanding what you want."
             align="center"
             className="mx-auto"
           />
@@ -311,9 +315,9 @@ export default function Home() {
             ))}
           </div>
           <p className="mx-auto mt-10 max-w-xl text-balance text-center text-sm leading-relaxed text-ink-muted">
-            Every element of our service model is designed to eliminate the
-            alternative entirely: disorganization, chased-down vendors,
-            mismanaged allergies, and embarrassment in front of senior
+            Every element of our service model exists to eliminate the
+            alternative: disorganization, vendors you have to chase,
+            allergies mismanaged, and embarrassment in front of senior
             leadership.
           </p>
         </Container>
@@ -326,7 +330,7 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SectionHeading
                 kicker="How It Works"
-                title="A defined process that protects quality and manages expectations."
+                title="A defined process, built to protect quality and manage expectations at every stage."
               />
               <Button href="/process" variant="secondary" className="w-fit">
                 See the Full Process
@@ -334,10 +338,10 @@ export default function Home() {
             </div>
             <ol className="flex flex-col gap-5">
               {[
-                ["01", "Inquiry & Discovery Call", "Group profile, goals, occasion, and dietary needs."],
-                ["02", "Proposal Delivery", "Custom proposal within 48 hours — itinerary, menu, investment."],
-                ["03", "Deposit & Confirmation", "50% deposit secures your date; full brief confirmed."],
-                ["04", "Planning & Execution", "Proactive updates at every milestone, through wrap and debrief."],
+                ["01", "Inquiry & Discovery Call", "Group profile, goals, occasion, and dietary needs — understood from the outset."],
+                ["02", "Proposal Delivery", "A custom proposal within 48 hours — itinerary, menu direction, and investment."],
+                ["03", "Deposit & Confirmation", "A 50% deposit secures your date; the full brief is confirmed."],
+                ["04", "Planning & Execution", "Proactive updates at every milestone, through event wrap and debrief."],
               ].map(([num, title, body]) => (
                 <li key={num} className="flex gap-5">
                   <span className="font-serif text-2xl text-brass">
@@ -362,7 +366,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 text-center">
             <MapPinned className="text-brass" size={24} strokeWidth={1.5} />
             <p className="font-serif text-xl text-ink">
-              Proudly serving the Collingwood–Blue Mountain corridor
+              Serving the Collingwood–Blue Mountain corridor
             </p>
             <p className="text-sm text-ink-muted">
               Collingwood · Blue Mountain · Thornbury · Meaford &amp;
@@ -381,8 +385,8 @@ export default function Home() {
             years.
           </h2>
           <p className="max-w-lg text-balance text-cream/75">
-            Tell us about your group, your goals, and your dates. You&rsquo;ll
-            have a custom proposal within 48 hours.
+            Tell us about your group, your goals, and your dates —
+            you&rsquo;ll have a custom proposal within 48 hours.
           </p>
           <Button
             href="/contact"

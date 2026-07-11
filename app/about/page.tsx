@@ -22,17 +22,17 @@ const toneRows = [
 const trust = [
   {
     icon: Users,
-    title: "A Dedicated Bureau Lead",
-    body: "Present at every event — your single, client-facing point of trust from arrival to departure.",
+    title: "One Bureau Lead, Every Event",
+    body: "Present at every event, from arrival to departure — your single, client-facing point of trust, coordinating every element in real time.",
   },
   {
     icon: ShieldCheck,
     title: "A Vetted Vendor Network",
-    body: "Every supplier is evaluated on quality, reliability, professionalism, and brand alignment. We never pass an unvetted vendor to a client.",
+    body: "Every supplier is evaluated on quality, reliability, professionalism, and brand alignment, with contingency vendors ready for every critical category. We never pass an unvetted vendor to a client.",
   },
   {
     icon: Award,
-    title: "Executive-Standard Staffing",
+    title: "Executive-Standard Contract Staffing",
     body: "A trusted, brand-aligned network of chefs and service professionals, briefed to bureau standard before every event.",
   },
 ];
@@ -67,12 +67,11 @@ export default function AboutPage() {
               </h2>
               <p className="leading-relaxed text-ink-muted">
                 Every moment is intentional. Every detail is managed. Every
-                touchpoint reflects the client&rsquo;s standard. The
-                Hospitality Bureau exists because corporate retreats
-                matter. Done well, they align leadership teams, reset
-                culture, and create moments people talk about for years.
-                Done poorly, they become a logistical headache nobody
-                remembers fondly.
+                touchpoint reflects the client&rsquo;s standard. Corporate
+                retreats matter — done well, they align leadership teams,
+                reset culture, and create moments people talk about for
+                years. Done poorly, they become a logistical headache
+                nobody remembers fondly.
               </p>
               <p className="font-serif text-lg text-ink italic">
                 We are here to make sure every retreat we touch falls into
@@ -93,7 +92,7 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             kicker="Brand Tone"
-            title="Who we are — and just as importantly, who we are not."
+            title="Who we are — and, with equal precision, who we are not."
             align="center"
             dark
             className="mx-auto"
@@ -164,7 +163,7 @@ export default function AboutPage() {
             <div className="order-1 flex flex-col gap-6 md:order-2">
               <SectionHeading
                 kicker="What You're Selling Isn't a Retreat"
-                title="It's what your team walks away with."
+                title="This is what your team walks away with."
               />
               <ul className="flex flex-col gap-3">
                 {walkAway.map((item) => (

@@ -18,8 +18,8 @@ export default function ContactPage() {
         <Container>
           <SectionHeading
             kicker="Start a Retreat"
-            title="Tell us about your group, your goals, and your dates."
-            subtitle="You'll have a custom proposal within 48 hours — including itinerary overview, menu direction, experience options, and investment."
+            title="Tell us about your group, your goals, and your dates — that's where we begin."
+            subtitle="Within 48 hours, you'll have a custom proposal in hand — itinerary overview, menu direction, experience options, and investment, built specifically around your group."
           />
         </Container>
       </section>
@@ -66,16 +66,18 @@ export default function ContactPage() {
                 <ol className="flex flex-col gap-3 text-sm leading-relaxed text-ink-muted">
                   <li>
                     <span className="font-medium text-ink">1. </span>
-                    We respond within 24 hours to schedule a discovery call.
+                    You hear from us within 24 hours to schedule a
+                    discovery call.
                   </li>
                   <li>
                     <span className="font-medium text-ink">2. </span>
-                    You receive a custom proposal within 48 hours of that
-                    call.
+                    A custom proposal is in your hands within 48 hours of
+                    that call.
                   </li>
                   <li>
                     <span className="font-medium text-ink">3. </span>
-                    A 50% deposit secures your date and planning begins.
+                    A 50% deposit secures your date, and the planning
+                    period begins.
                   </li>
                 </ol>
               </div>

@@ -42,7 +42,7 @@ export function Nav() {
             href="/contact"
             className="rounded-sm border border-forest bg-forest px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] text-cream uppercase transition-colors hover:bg-forest-dark hover:border-forest-dark"
           >
-            Start a Retreat
+            Design Your Retreat
           </Link>
         </nav>
 
@@ -81,7 +81,7 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="mt-2 inline-flex w-fit rounded-sm border border-forest bg-forest px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] text-cream uppercase"
           >
-            Start a Retreat
+            Design Your Retreat
           </Link>
           <span className="mt-4 text-xs text-ink-muted">{site.region}</span>
         </nav>
