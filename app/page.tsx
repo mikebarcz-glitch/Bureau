@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -87,15 +88,15 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="h-full w-full bg-gradient-to-br from-[#efe4c9] via-[#d8c7a1] to-[#a89876]" />
-          <div
-            className="absolute inset-0 opacity-50"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 15% 15%, rgba(255,255,255,0.5), transparent 45%), radial-gradient(circle at 85% 85%, rgba(0,0,0,0.18), transparent 55%)",
-            }}
+          <Image
+            src="/images/hero-georgian-bay.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-forest-dark/55" />
+          <div className="absolute inset-0 bg-forest-dark/60" />
         </div>
 
         <Container className="relative flex min-h-[86vh] flex-col justify-end gap-10 py-16 md:py-24">
@@ -104,8 +105,7 @@ export default function Home() {
               Collingwood · Blue Mountain · Thornbury · Meaford
             </span>
             <h1 className="font-serif text-balance text-4xl leading-[1.1] text-cream sm:text-5xl md:text-6xl lg:text-[4rem]">
-              Every retreat, designed. Every detail, executed. Nothing
-              improvised.
+              The Quiet Art of Being Hosted
             </h1>
             <p className="max-w-xl text-balance text-base leading-relaxed text-cream/85 md:text-lg">
               We design and execute premium corporate retreat experiences
