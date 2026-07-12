@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Award, ShieldCheck, Users } from "lucide-react";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { PlaceholderImage } from "@/app/components/PlaceholderImage";
+import { PhotoImage } from "@/app/components/PhotoImage";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -78,9 +78,9 @@ export default function AboutPage() {
                 the first category.
               </p>
             </div>
-            <PlaceholderImage
-              caption="Editorial photography — bureau lead coordinating on-site during service"
-              variant="stone"
+            <PhotoImage
+              src="/images/about-bureau-lead.jpg"
+              alt="An elegantly styled table setting prepared ahead of service"
               aspect="aspect-[4/5]"
             />
           </div>
@@ -154,9 +154,9 @@ export default function AboutPage() {
       <section className="bg-linen py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
-            <PlaceholderImage
-              caption="Editorial photography — leadership team gathered fireside post-dinner"
-              variant="brass"
+            <PhotoImage
+              src="/images/about-fireside.jpg"
+              alt="An elegant chalet lounge with a lit fireplace"
               aspect="aspect-[4/5]"
               className="order-2 md:order-1"
             />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Compass,
   Gem,
@@ -8,7 +9,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { PlaceholderImage } from "@/app/components/PlaceholderImage";
+import { PhotoImage } from "@/app/components/PhotoImage";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -28,7 +29,8 @@ const categories = [
       "Water-based activities: kayaking, paddleboarding, boat charters",
       "Ski and après-ski programming (seasonal)",
     ],
-    variant: "sage" as const,
+    image: "/images/experiences-adventure.jpg",
+    imageAlt: "A kayaker paddling across a calm, sunlit lake",
   },
   {
     icon: Sparkles,
@@ -40,7 +42,8 @@ const categories = [
       "Cold plunge and sauna circuit coordination",
       "In-chalet or outdoor spa services",
     ],
-    variant: "linen" as const,
+    image: "/images/experiences-wellness.jpg",
+    imageAlt: "A woman meditating peacefully beside a lake at golden hour",
   },
   {
     icon: Wine,
@@ -52,7 +55,8 @@ const categories = [
       "Chef-led market tours and ingredient sourcing",
       "Progressive dining evenings",
     ],
-    variant: "brass" as const,
+    image: "/images/experiences-culinary.jpg",
+    imageAlt: "An outdoor wine tasting table set with glasses under dappled light",
   },
   {
     icon: UsersRound,
@@ -64,7 +68,8 @@ const categories = [
       "Guided group challenges and team dynamics exercises",
       "Coaching sessions integrated into the retreat arc",
     ],
-    variant: "stone" as const,
+    image: "/images/experiences-team-building.jpg",
+    imageAlt: "A small group gathered around an outdoor table in conversation",
   },
   {
     icon: Gem,
@@ -76,7 +81,8 @@ const categories = [
       "Live music or bespoke curated entertainment",
       "Elevated après experiences",
     ],
-    variant: "sage" as const,
+    image: "/images/experiences-luxury.jpg",
+    imageAlt: "Warm flames glowing in an evening fireside setting",
   },
 ];
 
@@ -85,8 +91,15 @@ export default function ExperiencesPage() {
     <>
       <section className="relative overflow-hidden border-b border-stone/70">
         <div className="absolute inset-0">
-          <div className="h-full w-full bg-gradient-to-br from-sage-light via-sage to-sage-dark" />
-          <div className="absolute inset-0 bg-forest-dark/50" />
+          <Image
+            src="/images/experiences-hero.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-forest-dark/55" />
         </div>
         <Container className="relative flex min-h-[46vh] flex-col justify-end gap-6 py-20 md:py-24">
           <span className="kicker text-brass-light">
@@ -112,9 +125,9 @@ export default function ExperiencesPage() {
                 key={c.title}
                 className={`grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}
               >
-                <PlaceholderImage
-                  caption={`Editorial photography — ${c.title.toLowerCase()} programming`}
-                  variant={c.variant}
+                <PhotoImage
+                  src={c.image}
+                  alt={c.imageAlt}
                   aspect="aspect-[16/11]"
                 />
                 <div className="flex flex-col gap-5">

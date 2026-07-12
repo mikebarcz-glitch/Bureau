@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { PlaceholderImage } from "@/app/components/PlaceholderImage";
+import { PhotoImage } from "@/app/components/PhotoImage";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -32,7 +32,8 @@ const serviceSections = [
       "Full coordination of equipment, serviceware, linens, and staffing included",
       "A professional service standard calibrated to executive environments",
     ],
-    variant: "linen" as const,
+    image: "/images/services-chalet-catering.jpg",
+    imageAlt: "An artfully plated tasting course beside a glass of champagne",
     reverse: false,
   },
   {
@@ -49,7 +50,8 @@ const serviceSections = [
       "Interactive culinary formats designed around guest involvement",
     ],
     differentiators: [],
-    variant: "brass" as const,
+    image: "/images/services-hosted-dining.jpg",
+    imageAlt: "A candlelit private dinner table set with florals and fine glassware",
     reverse: true,
   },
   {
@@ -72,7 +74,8 @@ const serviceSections = [
       "Post-retreat debrief and feedback capture",
     ],
     differentiators: [],
-    variant: "stone" as const,
+    image: "/images/services-full-retreat.jpg",
+    imageAlt: "A modern black A-frame cabin retreat glowing at dusk",
     reverse: false,
   },
   {
@@ -88,7 +91,8 @@ const serviceSections = [
       "Departure gifting — memorable take-home moments",
     ],
     differentiators: [],
-    variant: "sage" as const,
+    image: "/images/services-corporate-gifting.jpg",
+    imageAlt: "An elegantly wrapped gift box tied with a black ribbon",
     reverse: true,
   },
 ];
@@ -145,9 +149,9 @@ export default function ServicesPage() {
             <div
               className={`grid grid-cols-1 gap-14 md:grid-cols-2 md:items-start ${s.reverse ? "md:[&>*:first-child]:order-2" : ""}`}
             >
-              <PlaceholderImage
-                caption={`Editorial photography — ${s.title.toLowerCase()} in a chalet setting`}
-                variant={s.variant}
+              <PhotoImage
+                src={s.image}
+                alt={s.imageAlt}
                 aspect="aspect-[4/5]"
               />
               <div className="flex flex-col gap-6">

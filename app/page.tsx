@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { PlaceholderImage } from "@/app/components/PlaceholderImage";
+import { PhotoImage } from "@/app/components/PhotoImage";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
 const pillars = [
@@ -168,9 +168,9 @@ export default function Home() {
                 Our positioning <ArrowRight size={15} />
               </Link>
             </div>
-            <PlaceholderImage
-              caption="Editorial photography — chalet great room styled for a welcome reception"
-              variant="stone"
+            <PhotoImage
+              src="/images/home-chalet-great-room.jpg"
+              alt="A chalet great room with a stone fireplace and warm wood ceiling, styled for a welcome reception"
               aspect="aspect-[4/5]"
             />
           </div>
@@ -252,9 +252,9 @@ export default function Home() {
       <section className="bg-linen py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
-            <PlaceholderImage
-              caption="Editorial photography — guided hike overlooking the Blue Mountains"
-              variant="sage"
+            <PhotoImage
+              src="/images/home-guided-hike.jpg"
+              alt="A sunlit forest trail during a guided hike"
               aspect="aspect-[4/5]"
               className="order-2 md:order-1"
             />
