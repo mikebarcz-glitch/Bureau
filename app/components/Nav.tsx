@@ -40,7 +40,7 @@ export function Nav() {
             );
           })}
           <Button href="/contact" size="sm">
-            Start a Retreat
+            Plan Your Retreat
           </Button>
         </nav>
 
@@ -85,7 +85,7 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="mt-2 w-fit"
           >
-            Start a Retreat
+            Plan Your Retreat
           </Button>
           <span className="mt-4 text-xs text-ink-muted">{site.region}</span>
         </nav>

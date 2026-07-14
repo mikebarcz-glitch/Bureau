@@ -18,7 +18,7 @@ export default function ContactPage() {
         <Container>
           <SectionHeading
             level="h1"
-            kicker="Start a Retreat"
+            kicker="Plan Your Retreat"
             title="Tell us about your group, your goals, and your dates — that's where we begin."
             subtitle="Within 48 hours, you'll have a custom proposal in hand — itinerary overview, menu direction, experience options, and investment, built specifically around your group."
           />

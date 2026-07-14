@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
+  BedDouble,
   Check,
-  ChefHat,
   Compass,
   Gift,
   MapPinned,
   NotebookPen,
   UtensilsCrossed,
+  Wine,
 } from "lucide-react";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
@@ -38,31 +38,36 @@ const pillars = [
   },
 ];
 
-const services = [
+const included = [
   {
+    icon: UtensilsCrossed,
     title: "Chalet Catering",
     body: "Breakfast, working lunches, plated dinners, and receptions — every menu custom, never templated.",
     href: "/services#catering",
   },
   {
+    icon: Wine,
     title: "Hosted Dining Experiences",
     body: "Chef's table narration, wine-paired evenings, and interactive culinary formats built for connection.",
     href: "/services#hosted-dining",
   },
   {
+    icon: Compass,
     title: "Off-Site Experiences",
     body: "Adventure, wellness, culinary, and team-building programming — fully vetted, fully coordinated.",
     href: "/experiences",
   },
   {
-    title: "Full Retreat Curation",
-    body: "Hand us the brief. We handle concept, vendors, logistics, and on-site management.",
-    href: "/services#full-retreat",
-  },
-  {
+    icon: Gift,
     title: "Corporate Gifting",
     body: "Branded welcome kits, chalet styling, and departure moments your guests remember.",
     href: "/services#gifting",
+  },
+  {
+    icon: BedDouble,
+    title: "Chalet Accommodations",
+    body: "A curated chalet matched to your group, with multi-property coordination for larger retreats.",
+    href: "/services#accommodations",
   },
 ];
 
@@ -76,10 +81,10 @@ const wants = [
 ];
 
 const stats = [
-  { value: "10–25", label: "Guests per retreat — our defined operating range" },
+  { value: "4–25", label: "Guests per retreat — our defined operating range" },
   { value: "5", label: "Interconnected service lines under one partnership" },
   { value: "90–120", label: "Minutes from Toronto to the corridor" },
-  { value: "48hrs", label: "From discovery call to custom proposal" },
+  { value: "48 hrs", label: "From discovery call to custom proposal" },
 ];
 
 export default function Home() {
@@ -115,7 +120,7 @@ export default function Home() {
             </p>
             <div className="mt-2 flex flex-wrap gap-4">
               <Button href="/contact" variant="accent">
-                Start a Retreat
+                Plan Your Retreat
               </Button>
               <Button href="/services" variant="ghost">
                 Explore Services
@@ -129,53 +134,22 @@ export default function Home() {
       <section className="border-b border-stone/70 bg-linen">
         <Container className="py-14 md:py-16">
           <p className="mx-auto max-w-3xl text-balance text-center font-serif text-xl leading-snug text-ink italic md:text-2xl">
-            &ldquo;We are not selling catering. We are selling peace of
-            mind, precision execution, and elevated brand perception —
-            delivered seamlessly, every time.&rdquo;
+            &ldquo;Every retreat, designed. Every detail, executed.&rdquo;
           </p>
         </Container>
       </section>
 
-      {/* The gap */}
+      {/* Pillars */}
       <section className="py-20 md:py-24">
         <Container>
-          <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
-            <div className="flex flex-col gap-6">
-              <SectionHeading
-                kicker="The Market Gap"
-                title="Everyone else hands you a piece. You're left assembling the whole."
-              />
-              <p className="text-balance leading-relaxed text-ink-muted">
-                Restaurants deliver good food, but no privacy or
-                flexibility. Caterers deliver meals, not experience.
-                Activity providers operate in isolation. Event planners
-                coordinate logistics without hospitality expertise. The
-                result: corporate planners left juggling multiple vendors —
-                absorbing risk, inconsistency, and friction into something
-                that should feel effortless.
-              </p>
-              <p className="leading-relaxed text-ink-muted">
-                The Hospitality Bureau is the only operator in the
-                Collingwood–Blue Mountain corridor delivering all five
-                pillars — retreat design, elevated dining, curated
-                off-site experiences, full vendor coordination, and
-                on-site execution — simultaneously, under one partnership.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex w-fit items-center gap-2 text-sm font-medium tracking-[0.04em] text-forest uppercase"
-              >
-                Our positioning <ArrowRight size={15} />
-              </Link>
-            </div>
-            <PhotoImage
-              src="/images/home-chalet-great-room.jpg"
-              alt="A chalet great room with a stone fireplace and warm wood ceiling, styled for a welcome reception"
-              aspect="aspect-[4/5]"
-            />
-          </div>
+          <SectionHeading
+            kicker="What Sets Us Apart"
+            title="Design. Dining. Experience. Execution."
+            align="center"
+            className="mx-auto"
+          />
 
-          <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map(({ icon: Icon, title, body }) => (
               <div key={title} className="flex flex-col gap-3">
                 <Icon className="text-forest" size={26} strokeWidth={1.5} />
@@ -190,15 +164,18 @@ export default function Home() {
       </section>
 
       {/* Stats strip */}
-      <section className="border-y border-stone/70 bg-forest-dark py-14 text-cream">
+      <section className="border-y border-stone/70 bg-linen py-16 md:py-20">
         <Container>
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
             {stats.map((s) => (
-              <div key={s.label} className="flex flex-col gap-1.5">
-                <span className="font-serif text-3xl text-brass-light md:text-4xl">
+              <div
+                key={s.label}
+                className="flex flex-col gap-2 rounded-sm border border-stone/70 bg-cream px-5 py-7 text-center"
+              >
+                <span className="font-serif text-3xl text-sage-dark md:text-4xl">
                   {s.value}
                 </span>
-                <span className="text-xs leading-snug text-cream/70">
+                <span className="text-xs leading-snug text-ink-muted">
                   {s.label}
                 </span>
               </div>
@@ -207,43 +184,35 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Services */}
+      {/* Full Retreat Production */}
       <section className="py-20 md:py-24">
         <Container>
           <SectionHeading
-            kicker="What We Do"
-            title="Five interconnected service lines. A single accountable partner."
-            subtitle="Each service line stands on its own — though clients who commission full retreat production experience the fullest expression of what we do."
+            kicker="Our Offering"
+            title="Full Retreat Production"
+            subtitle="Hand us the brief — we handle chalet catering, hosted dining, off-site experiences, corporate gifting, and accommodations, all under one accountable partnership."
             align="center"
             className="mx-auto"
           />
 
           <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
+            {included.map(({ icon: Icon, title, body, href }) => (
               <Link
-                key={s.title}
-                href={s.href}
+                key={title}
+                href={href}
                 className="group flex flex-col gap-3 rounded-sm border border-stone/70 bg-linen/50 p-7 transition-colors hover:border-forest hover:bg-linen"
               >
-                <h3 className="font-serif text-xl text-ink">{s.title}</h3>
+                <Icon className="text-forest" size={24} strokeWidth={1.5} />
+                <h3 className="font-serif text-xl text-ink">{title}</h3>
                 <p className="text-sm leading-relaxed text-ink-muted">
-                  {s.body}
+                  {body}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium tracking-[0.06em] text-forest uppercase opacity-0 transition-opacity group-hover:opacity-100">
-                  Learn more <ArrowRight size={13} />
-                </span>
               </Link>
             ))}
-            <div className="flex flex-col justify-center gap-4 rounded-sm border border-dashed border-stone-dark p-7">
-              <ChefHat className="text-brass" size={26} strokeWidth={1.5} />
-              <p className="text-sm leading-relaxed text-ink-muted">
-                Review full pricing ranges and inclusions for every service
-                line.
-              </p>
-              <Button href="/services#pricing" variant="secondary" className="w-fit">
-                View Services
-              </Button>
-            </div>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Button href="/contact">Plan Your Retreat</Button>
           </div>
         </Container>
       </section>
@@ -298,7 +267,7 @@ export default function Home() {
         <Container>
           <SectionHeading
             kicker="Why It Matters"
-            title="Understanding what you fear matters as much as understanding what you want."
+            title="What you should expect — every time."
             align="center"
             className="mx-auto"
           />
@@ -315,10 +284,8 @@ export default function Home() {
             ))}
           </div>
           <p className="mx-auto mt-10 max-w-xl text-balance text-center text-sm leading-relaxed text-ink-muted">
-            Every element of our service model exists to eliminate the
-            alternative: disorganization, vendors you have to chase,
-            allergies mismanaged, and embarrassment in front of senior
-            leadership.
+            These aren&rsquo;t add-ons. They&rsquo;re the standard for
+            every retreat we design.
           </p>
         </Container>
       </section>
@@ -366,11 +333,11 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 text-center">
             <MapPinned className="text-brass" size={24} strokeWidth={1.5} />
             <p className="font-serif text-xl text-ink">
-              Serving the Collingwood–Blue Mountain corridor
+              Serving the Collingwood–Blue Mountain Corridor
             </p>
             <p className="text-sm text-ink-muted">
               Collingwood · Blue Mountain · Thornbury · Meaford &amp;
-              surrounding areas
+              Surrounding Areas
             </p>
           </div>
         </Container>
@@ -389,7 +356,7 @@ export default function Home() {
             you&rsquo;ll have a custom proposal within 48 hours.
           </p>
           <Button href="/contact" variant="accent" className="mt-2">
-            Start a Retreat
+            Plan Your Retreat
           </Button>
         </Container>
       </section>
