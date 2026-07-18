@@ -52,6 +52,9 @@ export default function ContactPage() {
                   </a>
                   <div className="flex items-center gap-3 py-2">
                     <MapPin className="text-forest" size={17} strokeWidth={1.5} />
+                    {site.address}
+                  </div>
+                  <div className="py-2 pl-8 text-xs text-ink-muted">
                     {site.region}
                   </div>
                 </div>
