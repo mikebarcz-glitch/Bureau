@@ -50,14 +50,6 @@ const jsonLd = {
   email: site.email,
   telephone: site.phone,
   url: siteUrl,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "100 McCausland Drive",
-    addressLocality: "Markdale",
-    addressRegion: "ON",
-    postalCode: "N0C 1H0",
-    addressCountry: "CA",
-  },
   areaServed: ["Collingwood", "Blue Mountain", "Thornbury", "Meaford"],
   priceRange: "$1,500–$40,000+",
 };
