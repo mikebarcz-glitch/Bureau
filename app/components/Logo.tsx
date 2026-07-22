@@ -6,19 +6,27 @@ type LogoMarkProps = {
 export function LogoMark({ size = 32, className = "" }: LogoMarkProps) {
   return (
     <svg
-      viewBox="0 0 140 120"
+      viewBox="0 0 452.02 371.95"
       width={size}
-      height={(size * 120) / 140}
+      height={(size * 371.95) / 452.02}
       className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={3}
-      strokeLinejoin="round"
-      strokeLinecap="round"
       aria-hidden="true"
     >
-      <path d="M20 104 L20 42 L55 10 L118 60 L118 108 L72 108 L72 64" />
-      <rect x="36" y="64" width="36" height="40" />
+      <g
+        transform="translate(-4.99102,375.951408) scale(0.1,-0.1)"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M812 3359 l-762 -401 2 -1072 3 -1071 45 0 45 0 3 1045 2 1045 711
+373 c391 205 714 372 719 370 4 -2 326 -169 714 -373 l705 -370 1 -997 0 -998
+-475 0 -475 0 0 665 0 665 -480 0 -480 0 2 -712 3 -713 433 -3 432 -2 0 -385
+0 -385 1305 0 1305 0 -2 1073 -3 1072 -1370 722 c-753 397 -1427 751 -1496
+787 l-125 66 -762 -401z m2976 -873 l682 -359 0 -993 0 -994 -1210 0 -1210 0
+0 335 0 335 520 0 520 0 0 1021 c0 561 4 1019 8 1017 5 -1 315 -165 690 -362z
+m-1828 -961 l0 -615 -385 0 -385 0 0 615 0 615 385 0 385 0 0 -615z"
+        />
+      </g>
     </svg>
   );
 }
