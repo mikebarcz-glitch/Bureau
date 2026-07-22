@@ -104,21 +104,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-forest-dark/60" />
         </div>
 
-        <Container className="relative flex min-h-[86vh] flex-col justify-end gap-10 py-16 md:py-24">
-          <div className="flex max-w-3xl flex-col gap-6 animate-fade-up">
-            <span className="kicker text-brass-light">
-              Collingwood · Blue Mountain · Thornbury · Meaford
-            </span>
-            <h1 className="font-serif text-balance text-4xl leading-[1.1] text-cream sm:text-5xl md:text-6xl lg:text-[4rem]">
+        <Container className="relative flex min-h-[92vh] flex-col items-center justify-center gap-10 py-32 text-center">
+          <div className="flex max-w-3xl flex-col items-center gap-5 animate-fade-up">
+            <h1 className="font-serif text-balance text-4xl leading-[1.1] text-cream sm:text-5xl md:text-6xl lg:text-[4.25rem]">
               The Quiet Art of Being Hosted
             </h1>
-            <p className="max-w-xl text-balance text-base leading-relaxed text-cream/85 md:text-lg">
+            <span className="kicker text-cream/80">
+              Collingwood · Blue Mountain · Thornbury · Meaford
+            </span>
+            <p className="mx-auto max-w-xl text-balance text-base leading-relaxed text-cream/85 md:text-lg">
               We design and execute premium corporate retreat experiences
               for Toronto-based companies — dining, activities, logistics,
               and on-site management — under one trusted partnership, so
               you can be fully present.
             </p>
-            <div className="mt-2 flex flex-wrap gap-4">
+            <div className="mt-2 flex flex-wrap justify-center gap-4">
               <Button href="/contact" variant="accent">
                 Plan Your Retreat
               </Button>
